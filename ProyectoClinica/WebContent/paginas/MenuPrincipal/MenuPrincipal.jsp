@@ -18,9 +18,6 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link">Home<span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href=../SignosVitales/SignosVitales.jsp target="miContenedor">Mantenimiento</a>
                     </li>
@@ -43,8 +40,8 @@
                         <a class="dropdown-item" href="#">Documento</a>
                         <a class="dropdown-item" href="#">Correo@mail.com</a>
                         <div class="dropdown-divider"></div>
-                        <form class="dropdown-item" method="POST" action="Validar">
-                            <button class="btn btn-danger center-block" type="submit" name="accion" value="Salir">Cerrar Sesion</button>
+                        <form class="dropdown-item" method="POST" action="Login.jsp" target="miContenedor">
+                            <button class="btn btn-danger center-block" type="submit" name="accion" value="Salir"  >Cerrar Sesion</button>
                         </form>
                     </div>
                 </div>

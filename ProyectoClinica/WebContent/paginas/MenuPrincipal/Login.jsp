@@ -5,13 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>clinica UTP</title>
-<link href="../steel/SteelLogin.css" rel="Stylesheet" type= "text/css">
+<link href="../MenuPrincipal/steel/SteelLogin.css" rel="Stylesheet" type= "text/css">
 <link rel="sty">
 </head>
 <body>
 <div id="seccionL">
 <form>
-<p id="title">LOGIN </p> 
+<p id="title">LOGIN</p> 
 <hr>
 <br><br>
 <label id="usuario" >NOMBRE DE USUARIO  </label>
