@@ -30,13 +30,13 @@
                         <a class="nav-link" href=../SignosVitales/SignosVitales.jsp target="miContenedor">Mantenimiento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Procesos</a>
+                        <a class="nav-link">Citas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Reportes</a>
+                        <a class="nav-link">Consulta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Ventas</a>
+                        <a class="nav-link">Reporte</a>
                     </li>
                 </ul>
                 <div class="btn-group">
