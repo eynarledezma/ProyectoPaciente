@@ -10,17 +10,18 @@
 </head>
 <body>
 <div id="seccionL">
-<form>
+<form action="sesion.jsp"  method="GET">
 <p id="title">LOGIN</p> 
 <hr>
 <br><br>
 <label id="usuario" >NOMBRE DE USUARIO  </label>
 <br><br>
-<input type="text" class='entrada'/>
+
+<input type="text"   class='entrada' name="username" />
 <br><br>
 <label id="contraseña">CONTRASEÑA</label>
 <br><br>
-<input type="password" class='entrada'/>
+<input type="password" class='entrada'  name="password"/>
 <br><br>
 <input type="submit" value= "Iniciar sesión" id="boton">
 </form>
