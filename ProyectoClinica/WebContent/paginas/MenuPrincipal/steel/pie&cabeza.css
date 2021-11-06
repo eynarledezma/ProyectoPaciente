@@ -1,1 +1,27 @@
 @charset "ISO-8859-1";
+H1
+{
+	max-width: 1000px;
+	margin:0 auto;
+	background:#2FC6E9;
+	padding: 30px;
+	color:white;
+	
+	padding:5px 5px 15px 5px;
+	border-radius:9px;
+    font-family:Arial;  
+    font-zise:18px;
+}
+
+footer{
+	max-width: 1000px;
+	margin:0 auto;
+	background:#494343;
+	padding: 0px;
+	color:white;
+	text-align:center;
+	padding:5px 40px 0px 5px;
+	border-radius:9px;
+    font-family:Arial;  
+    font-zise:18px;
+}
