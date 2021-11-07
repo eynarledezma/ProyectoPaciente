@@ -30,9 +30,10 @@
 			<ul class="nav">
 				<li><a href="">Mantenimiento</a>
 					<ul>
-						<li><a href="">Estado</a></li>
-						<li><a href="">Usuario</a></li>
-						<li><a href="">Especialidad</a>
+						<li><a href="">Registro Paciente</a></li>
+						<li><a href="">Config. Estado</a></li>
+						<li><a href="../usuario/Usuarios.jsp">Config. Usuario</a></li>
+						<li><a href="">Config. Especialidad</a>
 							<ul>
 								<li><a href="">Submenu1</a></li>
 								<li><a href="">Submenu2</a></li>
@@ -40,6 +41,10 @@
 								<li><a href="">Submenu4</a></li>
 							</ul>
 						</li>
+						<li><a href="">Config. Medicamentos</a></li>
+						<li><a href="">Config. Sintomas</a></li>
+						<li><a href="">Config. Diagnostico</a></li>
+						<li><a href="">Config. Laboratorio</a></li>
 					</ul>
 				</li>
 				<li><a href="">Citas</a>
