@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link href="../MenuPrincipal/steel/MenuOpciones.css" rel="Stylesheet" type= "text/css">
 <title>Sistema de Pacientes</title>
 </head>
     <body>
@@ -25,20 +26,48 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href=../usuario/Usuarios.jsp target="miContenedor">Mantenimiento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Citas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Consulta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Reporte</a>
-                    </li>
-                </ul>
+               <div id="header">
+			<ul class="nav">
+				<li><a href="">Mantenimiento</a>
+					<ul>
+						<li><a href="">Estado</a></li>
+						<li><a href="">Usuario</a></li>
+						<li><a href="">Especialidad</a>
+							<ul>
+								<li><a href="">Submenu1</a></li>
+								<li><a href="">Submenu2</a></li>
+								<li><a href="">Submenu3</a></li>
+								<li><a href="">Submenu4</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Citas</a>
+					<ul>
+						<li><a href="">Submenu1</a></li>
+						<li><a href="">Submenu2</a></li>
+						<li><a href="">Submenu3</a></li>
+						<li><a href="">Submenu4</a>
+							<ul>
+								<li><a href="">Submenu1</a></li>
+								<li><a href="">Submenu2</a></li>
+								<li><a href="">Submenu3</a></li>
+								<li><a href="">Submenu4</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Consulta</a>
+					<ul>
+						<li><a href="">Submenu1</a></li>
+						<li><a href="">Submenu2</a></li>
+						<li><a href="">Submenu3</a></li>
+						<li><a href="">Submenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="">Reporte</a></li>
+			</ul>
+		</div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Nombre de usuario
