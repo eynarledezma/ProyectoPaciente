@@ -1,18 +1,135 @@
 @charset "ISO-8859-1";
+/*WAVE INICIO*/
+
+.bg_color{
+    width: 0%;
+    height: 20%;
+    background: #2196f3;
+    position: absolute;
+    top: 0;
+}
+
+.wave{
+    width: 6000px;
+    height: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    background-image: url(C:\Users\richard\git\ProyectoPaciente\ProyectoClinica\WebContent\paginas\citas\images\wd1.svg);
+    background-position: bottom;
+}
+
+.w1{
+    animation: w1 7s linear infinite;
+}
+
+.w2{
+    animation: w2 7s linear -.125s infinite, desplazamiento 7s ease -.125s infinite;
+    opacity: 0.5;
+}
+
+@keyframes w1 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes w2 {
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes desplazamiento {
+    0%, 100%{
+        transform: translateY(-25px);
+    }
+
+    50%{
+        transform: translateY(10px);
+    }
+}
+  /*WAVE FINAL*/
 td
 {
-    padding:0 15px 0 100px;
+	
+    padding:0 0px 0 70px;
 }
-#seccionL{
+H1
+{
+	max-width: 1000px;
+	margin:0 auto;
+	background:radial-gradient(circle at 78.58% 50%, #bafdff 0, #88ddfc 25%, #40b8e1 50%, #0094c7 75%, #0076b2 100%);;
+	padding: 30px;
+	color:white;
+	
+	padding:15px 500px 15px 500px;
+	border-radius:0px;
+    font-family:Arial;  
+    font-zise:18px;
+}
+
+
+footer{
+	max-width: 1000px;
+	margin:0 auto;
+	background:#494343;
+	padding: 0px;
+	color:white;
+	text-align:center;
+	padding:5px 40px 0px 5px;
+	border-radius:9px;
+    font-family:Arial;  
+    font-zise:18px;
+}
+#seccionA{
+	width:330px;
+	background:radial-gradient(circle at 50.11% 49.35%, #633d33 0, #5a3731 8.33%, #4e2f2e 16.67%, #402728 25%, #2f1e20 33.33%, #1c1315 41.67%, #000000 50%, #000000 58.33%, #000000 66.67%, #000000 75%, #000000 83.33%, #000000 91.67%, #000000 100%);
+	opacity:0.9;
+	color:#ffffff;
+	margin:auto;
+	margin-top:1px;
+	padding:0px 420px 0px 0px;
+	
+}
+#seccionB{
 	width:330px;
 	background:#494343;
 	opacity:0.9;
 	color:#ffffff;
-	margin:100;
+	margin:auto;
 	margin-top:1px;
-	padding:1px 1px 1px 1px;
-	border-top: 0px solid #494343;
-	border-left: 0px solid #494343;
-	border-right: 0px solid #494343;
-	border-radius:9px;
+	padding:0px 650px 0px 0px;
+	text-align:center;
+	
 }
+
+#boton {
+        padding:1px;
+        background:#494343;
+        color:white;
+        font:bold 10px/10px verdana;
+        width:100px;
+        cursor:pointer;
+        cursor:hand;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #seccionc{
+	width:330px;
+	background:radial-gradient(circle at 50.11% 49.35%, #633d33 0, #5a3731 8.33%, #4e2f2e 16.67%, #402728 25%, #2f1e20 33.33%, #1c1315 41.67%, #000000 50%, #000000 58.33%, #000000 66.67%, #000000 75%, #000000 83.33%, #000000 91.67%, #000000 100%);
+	opacity:0.9;
+	color:#ffffff;
+	margin:auto;
+	margin-top:1px;
+	padding:0px 170px 0px 0px;
+	
+}
+
