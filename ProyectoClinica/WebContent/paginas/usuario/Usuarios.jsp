@@ -12,13 +12,63 @@
 </div>
 </head>
 <body>
-<p>La captura y procesamiento de los datos en una organización, como parte del back office interno o externo, han de estar enfocados a la información crítica que aporte valor y proporcione una mejora sustancial en la gestión y toma de decisiones.
 
-Al digitalizar los documentos, se facilita la captura de los datos importantes y por lo tanto su análisis e integración en programas de gestión o gestores documentales.
+<div align="center" class="Form">
+ <form action="insertUsuario.jsp" method="get"    align="center"" >
 
-Cuando se trata de soporte papel o digital, la calidad de las imágenes obtenidas en el escaneo de documentos o de cualquier otra forma, es vital para la captura selectiva de los datos.
+<table>
 
-Mediante técnicas de OCR zonal, clasificación y validación inteligente de documentos, se consiguen capturar datos de calidad, optimizando la eficiencia en el análisis de los mismos. </p>
+<tr>
+
+<td>id: </td> 
+
+<td><input type="text" name="idempleado" id="idempleado"> </td>
+
+<td>direccion</td>
+<td><input type="text" name="direccion" id="direccion"> </td>
+
+
+</tr>
+
+<tr>
+
+<td>cedula</td>
+
+<td><input type="text" name="cedula" id="cedula"></td>
+<td>telefono</td>
+<td><input type="text" name="telefono" id="telefono"> </td>
+
+<tr>
+<td>Nombre</td>
+<td><input type="text" name="nombre" id="nombre"></td>
+<td></td><td></td>
+<td>email</td>
+<td><input type="text" name="email" id="email"> </td>
+
+<tr>
+<td>apellido</td>
+<td><input type="text" name="apellido" id="apellido"></td>
+<td>Password</td>
+<td><input type="text" name="password" id="password"> </td>
+</tr>
+</tr>
+<tr>
+
+<td colspan=4 align="center"><input type="submit" value="Guardar" ></td>
+</tr>
+<br><br>
+
+</table>
+</Form>
+</div>
+
+<p>
+Este apartado es para la captura de datos de los respectivos usuarios de nuestra clinica .<br><br><br><br><br><br><br><br><br><br><br><br>
+</p>
+
+
+
+</body>
 <div>
 <footer>
 Derechos reservados &copy; 2021 <br>
@@ -28,5 +78,4 @@ www.clinicautp.com <br>
 
 </footer>
 </div>
-</body>
 </html>

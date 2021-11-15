@@ -22,7 +22,7 @@ Class.forName("com.mysql.jdbc.Driver");
 
 
 
-Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/sirepacc","root","Hrebiyate7");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sirepacc","root","system");
 
 
 
