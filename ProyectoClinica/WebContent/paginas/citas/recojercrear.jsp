@@ -8,6 +8,7 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
+<%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,17 +31,12 @@ String edad=request.getParameter("edadpac");
 String sexo=request.getParameter("sexopac");
  
 
-Class.forName("com.mysql.jdbc.Driver");
-
-Connection con=DriverManager.getConnection
-("jdbc:mysql://localhost:3306/sirepacc","root","");
- 
 Statement st=con.createStatement();
 String sql="insert into pacientes (nombre,cedula,edad,sexo,fecha) values('"+nombre+"','"+cedula+"','"+edad+"','"+sexo+"','"+fecha_pac+"')";
 int flag=st.executeUpdate(sql);
 %>
 <% 
-String site = new String("crearcita.jsp");
+String site = new String("../citas/crearcita.jsp");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site);
          %>

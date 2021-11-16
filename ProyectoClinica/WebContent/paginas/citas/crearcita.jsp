@@ -7,6 +7,7 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
+<%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,10 +21,7 @@
  <div class="wave w1"></div>
  <div class="wave w2"></div>
 <%String horas=request.getParameter("horas");
-Class.forName("com.mysql.jdbc.Driver");
 
-Connection con=DriverManager.getConnection
-("jdbc:mysql://localhost:3306/sirepacc","root","");
  
 Statement st=con.createStatement();
 String query="select descripcion "; 
