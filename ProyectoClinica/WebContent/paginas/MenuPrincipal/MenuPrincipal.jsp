@@ -51,7 +51,7 @@
 				</li>
 				<li><a href="">Citas</a>
 					<ul>
-						<li><a href="../SignosVitales/SignosVitales.jsp" target="miContenedor">Toma Signos Vitales</a></li>
+						<li><a href="../citas/crearcita.jsp" target="miContenedor">Crear Citas</a></li>
 						<li><a href="">Submenu2</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a>
