@@ -12,6 +12,7 @@
 <body>
 <%
 
+
 String username=request.getParameter("username");
 
 String password=request.getParameter("password");
@@ -22,7 +23,7 @@ Class.forName("com.mysql.jdbc.Driver");
 
 
 
-Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sirepacc","root","system");
+ Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/sirepacc","root","Hrebiyate7");
 
 
 
@@ -38,7 +39,7 @@ query += "from tusuario where username='"+username+"' and password='"+password+"
 
 
 
-/*out.println(query);  */
+/*out.println(query);  */ 
 
 ResultSet rs=st.executeQuery(query);
 

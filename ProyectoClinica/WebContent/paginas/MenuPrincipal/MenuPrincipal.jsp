@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.sql.Connection"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,12 +77,13 @@
 		</div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Nombre de usuario
+                        <a>Bienvenido  </a> 
+                        <a><%=  session.getAttribute("fullname") %></a>                       
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user"></i></a>
-                        <a class="dropdown-item" href="#">Documento</a>
-                        <a class="dropdown-item" href="#">Correo@mail.com</a>
+                       <%--  <a class="dropdown-item" href="#"><i class="fas fa-user"></i></a>
+                        <a class="dropdown-item" href="#">Bienvenido</a>
+                        <a class="dropdown-item" href="#"><%=  session.getAttribute("fullname") %></a>  --%>
                         <div class="dropdown-divider"></div>
                         <form class="dropdown-item" method="POST" action="Login.jsp" target="miContenedor">
                             <button class="btn btn-danger center-block" type="submit" name="accion" value="Salir"  >Cerrar Sesion</button>
