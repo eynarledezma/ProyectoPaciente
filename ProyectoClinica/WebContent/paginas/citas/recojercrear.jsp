@@ -17,22 +17,24 @@
 </head>
 <body>
 <%
- 
-String cedula=request.getParameter("cedulapaciente");
- 
-String nombre=request.getParameter("nombrepaciente");
- 
+
 String id_paciente=request.getParameter("id_paciente");
+String fechacita=request.getParameter("fechacita");
  
-String fecha_pac=request.getParameter("fechapac");
+String fechaconsulta=request.getParameter("fechaconsulta");
  
-String edad=request.getParameter("edadpac");
+String id_especialidad=request.getParameter("especialidad");
  
-String sexo=request.getParameter("sexopac");
+String id_medico=request.getParameter("medico");
+ 
+String observacion=request.getParameter("observacion");
+ 
+String estado="5";
+String eliminado="1";
  
 
 Statement st=con.createStatement();
-String sql="insert into pacientes (nombre,cedula,edad,sexo,fecha) values('"+nombre+"','"+cedula+"','"+edad+"','"+sexo+"','"+fecha_pac+"')";
+String sql="insert into tcitas (idpaciente,fecha,fechaconsulta,idespecialidad,idmedico,observacion,estado,userelimina) values('"+id_paciente+"','"+fechacita+"','"+fechaconsulta+"','"+id_especialidad+"','"+id_medico+"','"+observacion+"','"+estado+"','"+eliminado+"')";
 int flag=st.executeUpdate(sql);
 %>
 <% 
