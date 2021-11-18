@@ -127,7 +127,7 @@ while(rs3.next())
 
 %>
 
-<option id=valor1 value="<%=rs3.getString(1)%>"><%=rs3.getString(2)%><%=rs3.getString(3)%></option></td>
+<option id=valor1 value="<%=rs3.getString(1)%>"><%=rs3.getString(2)%><%=rs3.getString(3)%></option>
 
   
 <%

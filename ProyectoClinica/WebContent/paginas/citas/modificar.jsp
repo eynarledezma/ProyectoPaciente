@@ -7,22 +7,20 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
+<%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link href="C:\Users\richard\git\ProyectoPaciente\ProyectoClinica\WebContent\paginas\citas\cabpacientes.css" rel="Stylesheet" type= "text/css">
+<link href="../citas/cabpacientes.css" rel="Stylesheet" type= "text/css">
 </head>
 <body>
 <%
-Class.forName("com.mysql.jdbc.Driver");
 
-Connection con=DriverManager.getConnection
-("jdbc:mysql://localhost:3306/sirepacc","root","");
 Statement st=con.createStatement();
-String query="SELECT pacientes.cedula, pacientes.nombre, tespecialidades.descripcion, tusuario.nombreusu, tusuario.apellidousu "; 
-query += "FROM pacientes, tespecialidades,tusuario;";
+String query="SELECT * "; 
+query += "FROM tcitas";
 
 out.println(query);
 
@@ -32,20 +30,24 @@ if (rs.next())
 {
 	 rs=st.executeQuery(query);
 %>
-<div id="seccionc">
+<h1 align="center">modificar cita</h1>
+<hr>
+<h2 align="center">Datos</h2>
+
 <div class="table-responsive">
+<div id="seccionA">
 <table class="table table-striped" border="2" bordercolor="#2494b7">
 <thead>
 <tr>
-<th>cedula del paciente</th>
-<th>nombre del pacinete</th>
-
-<th>especialidad</th>
-
-
-<th>doctor</th>
-
-
+<th>id_cita</th>
+<th>id_paciente</th>
+<th>fecha</th>
+<th>fecha de consulta</th>
+<th>id_especialidad</th>
+<th>idmedico</th>
+<th>observacion</th>
+<th>modificar</th>
+<th>eliminar</th>
 
 </tr>
 <thead>
@@ -61,12 +63,14 @@ while(rs.next())
 <tr>
 
 <td><%=rs.getString(1)%></td>
-
 <td><%=rs.getString(2)%></td>
-
 <td><%=rs.getString(3)%></td>
-
-<td><%=rs.getString(4)%> <%=rs.getString(5)%></td>
+<td><%=rs.getString(4)%></td>
+<td><%=rs.getString(5)%></td>
+<td><%=rs.getString(6)%></td>
+<td><%=rs.getString(7)%></td>
+<td><a href="modiinfo.jsp?id_cita=<%=rs.getString(1)%>&id_paciente=<%=rs.getString(2)%>&id_especialidad=<%=rs.getString(5)%>&id_medico=<%=rs.getString(6)%>">--</a></td>
+<td><a href=delete.jsp?id_cita=<%=rs.getString(1)%>>--</a></td>
 
 
 
@@ -92,6 +96,15 @@ else
 
 %>
 </div>
+</div>
+<div>
+<footer>
+Derechos reservados &copy; 2021 <br>
+Grupo 2ls222<br>
+Grupo2ls222@utp.ac.pa<br>
+www.clinicautp.com <br>
+
+</footer>
 </div>
 </body>
 </html>
