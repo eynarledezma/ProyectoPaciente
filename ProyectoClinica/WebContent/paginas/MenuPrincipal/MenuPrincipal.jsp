@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <div id="header">
 			<ul class="nav">
-				<li><a href="">Mantenimiento</a>
+				<li><a><font color="white">Mantenimiento</font></a>
 					<ul>
 						<li><a href="">Registro Paciente</a></li>
 						<li><a href="">Config. Estado</a></li>
@@ -49,7 +49,7 @@
 						<li><a href="">Config. Laboratorio</a></li>
 					</ul>
 				</li>
-				<li><a href="">Citas</a>
+				<li><a><font color="white">Citas</font></a>
 					<ul>
 						<li><a href="../citas/crearcita.jsp" target="miContenedor">Crear Citas</a></li>
 						<li><a href="">Submenu2</a></li>
@@ -64,7 +64,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="">Consulta</a>
+				<li><a><font color="white">Consulta</font></a>
 					<ul>
 						<li><a href="">Submenu1</a></li>
 						<li><a href="">Submenu2</a></li>
@@ -72,7 +72,7 @@
 						<li><a href="">Submenu4</a></li>
 					</ul>
 				</li>
-				<li><a href="">Reporte</a></li>
+				<li><a><font color="white">Reporte</font></a></li>
 			</ul>
 		</div>
                 <div class="btn-group">
@@ -85,7 +85,8 @@
                         <a class="dropdown-item" href="#">Bienvenido</a>
                         <a class="dropdown-item" href="#"><%=  session.getAttribute("fullname") %></a>  --%>
                         <div class="dropdown-divider"></div>
-                        <form class="dropdown-item" method="POST" action="Login.jsp" target="miContenedor">
+                        <form class="dropdown-item" method="POST" action="Login.jsp" >
+                        	<%   session.setAttribute( "fullname", ' ' );  %>
                             <button class="btn btn-danger center-block" type="submit" name="accion" value="Salir"  >Cerrar Sesion</button>
                         </form>
                     </div>
