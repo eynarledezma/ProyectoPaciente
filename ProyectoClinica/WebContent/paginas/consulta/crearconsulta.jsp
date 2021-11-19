@@ -30,13 +30,13 @@ if (rs.next())
 {
 	 rs=st.executeQuery(query);
 %>
-<h1 align="center">modificar cita</h1>
+<h1 align="center">crear consulta</h1>
 <hr>
 <h2 align="center">Datos</h2>
 
 <div class="table-responsive">
-
-<table style="position:absolute;top:150px;left:550px;" class="table table-striped" border="2" bordercolor="#2494b7">
+<div id="seccionA">
+<table class="table table-striped" border="2" bordercolor="#2494b7">
 <thead>
 <tr>
 <th>id_cita</th>
@@ -46,8 +46,8 @@ if (rs.next())
 <th>id_especialidad</th>
 <th>idmedico</th>
 <th>observacion</th>
-<th>modificar</th>
-<th>eliminar</th>
+<th>consulta</th>
+
 
 </tr>
 <thead>
@@ -69,8 +69,8 @@ while(rs.next())
 <td><%=rs.getString(5)%></td>
 <td><%=rs.getString(6)%></td>
 <td><%=rs.getString(7)%></td>
-<td><a href="modiinfo.jsp?id_cita=<%=rs.getString(1)%>&id_paciente=<%=rs.getString(2)%>&id_especialidad=<%=rs.getString(5)%>&id_medico=<%=rs.getString(6)%>">--</a></td>
-<td><a href=delete.jsp?id_cita=<%=rs.getString(1)%>>--</a></td>
+<td><a href="addconsult.jsp?id_cita=<%=rs.getString(1)%>&id_paciente=<%=rs.getString(2)%>&id_especialidad=<%=rs.getString(5)%>&fecha=<%=rs.getString(4)%>&id_medico=<%=rs.getString(6)%>&observacion=<%=rs.getString(7)%>">--</a></td>
+
 
 
 
@@ -97,14 +97,6 @@ else
 %>
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <div>
 <footer>
 Derechos reservados &copy; 2021 <br>

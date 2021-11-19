@@ -12,7 +12,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link href="../citas/cabpacientes.css" rel="Stylesheet" type= "text/css">
+<link href="../consulta/cabpacientes.css" rel="Stylesheet" type= "text/css">
 </head>
 <body>
 <% 
@@ -74,8 +74,8 @@ while(rs2.next())
 <div id="seccionA">
 
 <table border =0>
-<tr><td colspan=1 ALIGN="left"> cedula</td><td><INPUT TYPE="text"  disabled="disabled" NAME="id_paciente" value ="<%=rs2.getString(1)%>"></td></tr>
-<tr><td colspan=1 ALIGN="left"> Nombre</td><td><INPUT TYPE="text" disabled="disabled" NAME="nombrepaciente" value ="<%=rs2.getString(2)%> <%=rs2.getString(3)%>"></td></tr>
+<tr><td colspan=1 ALIGN="left"> cedula</td><td><INPUT TYPE="text"   NAME="id_paciente" value ="<%=rs2.getString(1)%>"></td></tr>
+<tr><td colspan=1 ALIGN="left"> Nombre</td><td><INPUT TYPE="text"  NAME="nombrepaciente" value ="<%=rs2.getString(2)%> <%=rs2.getString(3)%>"></td></tr>
 
 <%
 
@@ -115,7 +115,7 @@ while(rs3.next())
 {
 
 %>
-<tr><td colspan=1 ALIGN="left"> Anterior especialidad</td><td> <input type="text"  disabled="disabled" name="antespecialidad" value ="<%=rs3.getString(1)%>"> </td> </tr>
+<tr><td colspan=1 ALIGN="left"> Anterior especialidad</td><td> <input type="text"   name="antespecialidad" value ="<%=rs3.getString(1)%>"> </td> </tr>
 <%
 
 }
@@ -132,7 +132,7 @@ while(rs6.next())
 {
 
 %>
-<tr><td colspan=1 ALIGN="left"> Anterior medico</td><td> <input type="text"  disabled="disabled" name="antespecialidad" value ="<%=rs6.getString(1)%><%=rs6.getString(2)%>"> </td> 
+<tr><td colspan=1 ALIGN="left"> Anterior medico</td><td> <input type="text"  name="antespecialidad" value ="<%=rs6.getString(1)%><%=rs6.getString(2)%>"> </td> 
 <%
 
 }
