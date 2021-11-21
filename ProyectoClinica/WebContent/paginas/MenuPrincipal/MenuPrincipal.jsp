@@ -43,7 +43,7 @@
 								<li><a href="">Submenu4</a></li>
 							</ul>
 						</li>
-						<li><a href="">Config. Medicamentos</a></li>
+						<li><a href="../Mantenimiento/conf_medicamentos.jsp" target="miContenedor">Config. Medicamentos</a></li>
 						<li><a href="">Config. Sintomas</a></li>
 						<li><a href="">Config. Diagnostico</a></li>
 						<li><a href="">Config. Laboratorio</a></li>
