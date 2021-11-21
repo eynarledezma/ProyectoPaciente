@@ -1,25 +1,46 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*" %> 
+<%@page import="java.io.*" %> 
+<%@page import="javax.sql.*" %> 
+<%@page import="java.sql.Connection" %>
+<%@include file="../citas/Conecta.jsp" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 
-<link href="../MenuPrincipal/steel/conf_style.css" rel="stylesheet" type="text/css"/>
+<!-- <link href="../MenuPrincipal/steel/conf_style.css" rel="stylesheet" type="text/css"/> -->
+ <link href="../citas/cabpacientes.css" rel="stylesheet" type="text/css"/>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sistema Pacientes</title>
 </head>
 <body>
-<section class="form-register">
-    	<h4>Formulario Registro</h4>
-    	<h1>Nombre</h1>
-    	<input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    	<h1>Apellido</h1>
-    	<input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    	<input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-    	<input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
-    	<p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-    	<input class="botons" type="submit" value="Registrar">
-    	<p><a href="#">¿Ya tengo Cuenta?</a></p>
-  </section>
+
+<h1 align="center">Configuración Especialidad</h1>
+<hr>
+<h3 align="center">Datos de la Especialidad</h3>
+<div id="seccionA">	
+	<section class="form-registe"> 
+	<form action="GuardarEspecialidad.jsp" method="get">  		
+    	<tr> id Especialidad</tr> <br>
+    	<input class="controls" type="text" name="idespecialidad" id="idespecialidad" placeholder="Id se carga automatico" disabled> <br><br>
+    	<tr>Descripción</tr><br>
+    	<input class="controls" type="text" name="descripcion" id="descripcion" placeholder="Ingrese Especialidad"> <br> <br> 	
+    	<input class="botons" type="submit" value="Registrar">  
+    </form>
+   
+	</section><br><br><br><br><br><br>
+	
+
+</div>
+<div>
+<footer>
+Derechos reservados &copy; 2021 <br>
+Grupo 2ls222<br>
+Grupo2ls222@utp.ac.pa<br>
+www.clinicautp.com <br>
+</footer>
+</div>
 </body>
 </html>
