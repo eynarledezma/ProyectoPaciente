@@ -17,9 +17,9 @@
 </head>
 <body>
 
-<h1 align="center">Configuración Estado</h1>
+<h1 align="center">Configuración Usuario</h1>
 <hr>
-<h3 align="center">Datos del Estado</h3>
+<h3 align="center">Datos del Usuario</h3>
 <div id="seccionA">	
 	<section class="form-registe"> 
 	<form action="GuardarUsuario.jsp" method="get">  		
@@ -45,10 +45,14 @@
     	<input class="controls" type="text" name="estado" id="estado" placeholder="Ingrese estado"> <br> <br> 	
     	<tr>Username</tr><br>
     	<input class="controls" type="text" name="username" id="username" placeholder="Ingrese username"> <br> <br>
+    	<p>
     	<tr>Sexo</tr><br>
-    	<input class="controls" type="text" name="sexo" id="sexo" placeholder="Ingrese sexo"> <br> <br>
+    	mujer<input class="controls" type="radio" name="sexo" id="sexo" value="0"> <br> <br> 
+    	hombre<input class="controls" type="radio" name="sexo" id="sexo" value="1"> 
+    	</p>
     	<tr>Fecha de nacimiento</tr><br>
-    	<input type="date" name="fechanacimiento"> </td> </tr>	
+    	<tr><td colspan=1 ALIGN="left">Fecha de nacimiento</td><td> <input type="date" name="fechanacimiento"> </td> </tr>
+    		
     	<tr>Edad</tr><br>
     	<input class="controls" type="text" name="edad" id="edad" placeholder="Ingrese edad"> <br> <br>	
     	<input class="botons" type="submit" value="Registrar">  

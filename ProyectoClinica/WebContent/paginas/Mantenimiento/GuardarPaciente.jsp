@@ -38,7 +38,7 @@ String fechanacimiento=request.getParameter("fechanaciento");
 %> 
 
  <% 
-String site = new String("../Mantenimiento/conf_usuario.jsp");
+String site = new String("../Mantenimiento/registro_paciente.jsp");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site);
          %> 
