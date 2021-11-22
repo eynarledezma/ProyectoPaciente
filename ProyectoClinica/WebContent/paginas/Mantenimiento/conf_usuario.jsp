@@ -46,13 +46,13 @@
     	<input class="controls" type="text" name="estado" id="estado" placeholder="Ingrese estado"> <br> <br> 	
     	<tr>Username</tr><br>
     	<input class="controls" type="text" name="username" id="username" placeholder="Ingrese username"> <br> <br>
-    	<p>
-    	<tr>Sexo</tr><br>
-    	mujer<input class="controls" type="radio" name="sexo" id="sexo" value="0"> <br> <br> 
-    	hombre<input class="controls" type="radio" name="sexo" id="sexo" value="1"> 
+    	<td width="20%"><tr>Sexo</tr></td><br>
+    	<input type="radio" name="sexo" id="sexo" value="0">Mujer<br>
+    	<input type="radio" name="sexo" id="sexo" value="1"> hombre<br>
     	</p>
-    	<tr>Fecha de nacimiento</tr><br>
-    	<tr><td colspan=1 ALIGN="left">Fecha de nacimiento</td><td> <input type="date" name="fechanacimiento"> </td> </tr>
+    	<!--  <tr>Fecha de nacimiento</tr><br>  -->
+    	 <tr><td>Fecha de nacimiento</td><tr><br>
+    	 <input type="date" name="fechanacimiento"> </td> </tr><br><br>
     		
     	<tr>Edad</tr><br>
     	<input class="controls" type="text" name="edad" id="edad" placeholder="Ingrese edad"> <br> <br>	
