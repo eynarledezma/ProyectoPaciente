@@ -44,12 +44,12 @@
 							</ul>
 						</li>
 						<li><a href="../Mantenimiento/conf_medicamentos.jsp" target="miContenedor">Config. Medicamentos</a></li>
-						<li><a href="">Config. Sintomas</a></li>
-						<li><a href="">Config. Diagnostico</a></li>
-						<li><a href="">Config. Laboratorio</a></li>
+						<li><a href="../Mantenimiento/conf_sintomas.jsp" target="miContenedor">Config. Sintomas</a></li>
+						<li><a href="../Mantenimiento/conf_diagnostico.jsp" target="miContenedor">Config. Diagnostico</a></li>
+						<li><a href="../Mantenimiento/conf_laboratorio.jsp" target="miContenedor">Config. Laboratorio</a></li>
 					</ul>
 				</li>
-				<li><a><font color="white">Citas</font></a>
+				<li><a><font color="white">Citas</font></a> 
 					<ul>
 						<li><a href="../citas/crearcita.jsp" target="miContenedor">Crear Citas</a></li>
 						<li><a href="">Submenu2</a></li>
@@ -87,6 +87,7 @@
                         <div class="dropdown-divider"></div>
                         <form class="dropdown-item" method="POST" action="Login.jsp" >
                         	<%   session.setAttribute( "fullname", ' ' );  %>
+                        	           
                             <button class="btn btn-danger center-block" type="submit" name="accion" value="Salir"  >Cerrar Sesion</button>
                         </form>
                     </div>
