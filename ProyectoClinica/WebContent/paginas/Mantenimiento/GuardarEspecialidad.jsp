@@ -21,13 +21,13 @@
 	
 	out.print("ESPECIALIDAD REGISTRADA"); 
 	
+	
 %> 
 
-<% 
+ <% 
 String site = new String("../Mantenimiento/conf_especialidad.jsp");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site);
          %> 
-
 </body>
 </html>

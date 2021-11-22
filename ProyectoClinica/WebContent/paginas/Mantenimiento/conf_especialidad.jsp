@@ -10,8 +10,8 @@
 <html>
 <head>
 
-<!-- <link href="../MenuPrincipal/steel/conf_style.css" rel="stylesheet" type="text/css"/> -->
- <link href="../citas/cabpacientes.css" rel="stylesheet" type="text/css"/>
+ <!-- <link href="../MenuPrincipal/steel/conf_style.css" rel="stylesheet" type="text/css"/>  -->
+  <link href="../citas/cabpacientes.css" rel="stylesheet" type="text/css"/> 
 <meta charset="ISO-8859-1">
 <title>Sistema Pacientes</title>
 </head>
@@ -23,7 +23,7 @@
 <div id="seccionA">	
 	<section class="form-registe"> 
 	<form action="GuardarEspecialidad.jsp" method="get">  		
-    	<tr> id Especialidad</tr> <br>
+    	<td><tr> id Especialidad</tr></td> <br>
     	<input class="controls" type="text" name="idespecialidad" id="idespecialidad" placeholder="Id se carga automatico" disabled> <br><br>
     	<tr>Descripción</tr><br>
     	<input class="controls" type="text" name="descripcion" id="descripcion" placeholder="Ingrese Especialidad"> <br> <br> 	
