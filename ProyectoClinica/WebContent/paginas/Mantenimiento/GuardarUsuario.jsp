@@ -3,6 +3,7 @@
 <%@page import="java.sql.*" %> 
 <%@page import="java.io.*" %> 
 <%@page import="javax.sql.*" %> 
+<%@page import="java.util.Date" %>
 <%@page import="java.sql.Connection" %>
 <%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
@@ -21,14 +22,16 @@ String telefono=request.getParameter("telefono");
 String email=request.getParameter("email"); 
 String password=request.getParameter("password");
 String celular=request.getParameter("celular"); 
-String cedulaa=request.getParameter("cedula"); 
 String estado=request.getParameter("estado"); 
 String username=request.getParameter("username"); 
-int sexo=Integer.parseInt(request.getParameter("sexo")); 
-String fechanacimiento=request.getParameter("fechanaciento"); 
-    int edad=Integer.parseInt(request.getParameter("edad"));
+String sexo=request.getParameter("sexo"); 
+String fnac=request.getParameter("fechanacimiento"); 
+String  edad=request.getParameter("edad");
+/* SimpleDateFormat formato = new SimpleDateFormat("dd/LL/yyyy"); */
+/* date fecha= formato.format(fechanacimiento); */
+ 	/* Date fecha = new SimpleDateFormat ("dd/MM/yyyy").parse(fechanacimiento);  */
 	Statement st=con.createStatement();
-	String sql="insert into tusuario(cedula,nombre,apellido,direccion,telefono,email,password,celular,estado,username,sexo,edad) values ('"+cedulaa+"','"+nombre+"','"+apellido+"','"+direccion+"','"+telefono+"','"+email+"','"+password+"','"+celular+"','"+estado+"','"+username+"','"+sexo+"','"+edad+"')";
+	String sql="insert into tusuario(cedula,nombre,apellido,direccion,telefono,email,password,celular,estado,username,sexo,fecha_nac,edad) values ('"+cedula+"','"+nombre+"','"+apellido+"','"+direccion+"','"+telefono+"','"+email+"','"+password+"','"+celular+"','"+estado+"','"+username+"','"+sexo+"','"+fnac+"','"+edad+"')";
 	int flag=st.executeUpdate(sql);
 
 	

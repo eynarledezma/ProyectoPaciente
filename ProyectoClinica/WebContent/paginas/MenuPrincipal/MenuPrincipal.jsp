@@ -34,7 +34,7 @@
 					<ul>
 						<li><a href="">Registro Paciente</a></li>
 						<li><a href="">Config. Estado</a></li>
-						<li><a href="../usuario/Usuarios.jsp" target="miContenedor">Config. Usuario</a></li>
+						<li><a href="../Mantenimiento/conf_usuario.jsp" target="miContenedor">Config. Usuario</a></li>
 						<li><a href="../Mantenimiento/conf_especialidad.jsp" target="miContenedor">Config. Especialidad</a>
 							<ul>
 								<li><a href="">Submenu1</a></li>
