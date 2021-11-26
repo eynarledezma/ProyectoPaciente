@@ -3,9 +3,9 @@
 <%@ page import = "java.sql.Connection"%>  
 
 <!DOCTYPE html>
-  <% session.setAttribute("accion","lectura");
+<%--   <%  session.setAttribute("accion","lectura");
        session.setAttribute("mod1","mantenimiento");
-    %>
+    %> --%>
   
 <html>
 <head>

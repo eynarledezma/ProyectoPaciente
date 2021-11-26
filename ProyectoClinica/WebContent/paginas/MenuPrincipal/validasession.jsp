@@ -21,7 +21,7 @@ String idusuario=(String)session.getAttribute("id");
 //accion = "a";
 if (accion == "lectura")
 {
-	   query2="select idusuario  "; 
+	   query2="select idusuario"; 
 	query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and lectura = 'si' ";
 }
 else
@@ -49,8 +49,6 @@ else
 	}
 }
 
-
-
 //out.println(query2);
 ResultSet rs2=st2.executeQuery(query2);
 int encontrado = 0;
@@ -71,7 +69,8 @@ else
 {
 	session.setAttribute("paso","no");
 	out.println("xuxa no puedes entrar");
-	//response.sendRedirect("error.jsp");	
+	response.sendRedirect("../MenuPrincipal/error.jsp");	
+	
 }
 
 %>

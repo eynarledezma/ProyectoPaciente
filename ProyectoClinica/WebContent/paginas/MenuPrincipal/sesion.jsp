@@ -18,12 +18,6 @@ String username=request.getParameter("username");
 
 String password=request.getParameter("password");
 
-
-
-
-
-
-
 Statement st=con.createStatement();
 
 
@@ -92,41 +86,22 @@ if (encontrado==1)
 
 //MENU
 <%
-
     response.sendRedirect("../MenuPrincipal/MenuPrincipal.jsp");
 %>
-
- 
 
 <% 
 
 }
 
 else
-
 {
-
    out.println("Usuario No registrado...");
-
 }
-
-
-
 %>
-
-
-
-
-
 <br/>
-
 <br/>
-
 <A HREF="close.jsp">Cerrar Sesion</A><br/>
-
 </div>
-
 </div>
-
 </body>
 </html>
