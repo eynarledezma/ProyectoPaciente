@@ -1,27 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import = "java.sql.Connection"%>
-    
+<%@ page import = "java.sql.Connection"%>  
+
 <!DOCTYPE html>
+  <% session.setAttribute("accion","lectura");
+       session.setAttribute("mod1","mantenimiento");
+    %>
+  
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href="../MenuPrincipal/steel/MenuOpciones.css" rel="Stylesheet" type= "text/css">
+
 <title>Sistema de Pacientes</title>
 </head>
     <body>
-   <%--  <%Class.forName("com.mysql.jdbc.Driver");
-
-
-
-	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/test","root","Hrebiyate7");
-
-
-
-	Statement st=con.createStatement(); %>
- --%>
+    
+  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Sistema de Pacientes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <div id="header">
 			<ul class="nav">
-				<li><a><font color="white">Mantenimiento</font></a>
+				<li><a  ><font color="white">Mantenimiento</font></a>
 					<ul>
 						<li><a href="">Registro Paciente</a></li>
 						<li><a href="">Config. Estado</a></li>
@@ -66,8 +63,8 @@
 				</li>
 				<li><a><font color="white">Consulta</font></a>
 					<ul>
-						<li><a href="">Submenu1</a></li>
-						<li><a href="">Submenu2</a></li>
+						<li><a href="../consulta/crearconsulta.jsp" target="miContenedor">crear consulta</a></li>
+						<li><a href="../consulta/mostrar.jsp" target="miContenedor">ver consulta</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a></li>
 					</ul>

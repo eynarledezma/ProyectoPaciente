@@ -3,6 +3,7 @@
 <%@page import="java.sql.*" %>
 <%@page import="javax.sql.*" %>
 <%@page import="java.sql.Connection"%>
+<%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,11 +20,7 @@ String password=request.getParameter("password");
 
 
 
-Class.forName("com.mysql.jdbc.Driver");
 
-
-
- Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/sirepacc","root","Hrebiyate7");
 
 
 
@@ -31,7 +28,7 @@ Statement st=con.createStatement();
 
 
 
-String query="select nombre, password, concat( nombre, ' ' , apellido) fullname , direccion, telefono "; 
+String query="select idusuario,nombre, password, concat( nombre, ' ' , apellido) fullname , direccion, telefono "; 
 
 query += "from tusuario where username='"+username+"' and password='"+password+"'";
 
@@ -47,6 +44,8 @@ int encontrado = 0;
 
 String name;
 
+String id;
+
 String fullname;
 
 while(rs.next())
@@ -58,10 +57,14 @@ encontrado=1;
  name = rs.getString("nombre");
 
  fullname = rs.getString("fullname");
-
+ 
+ id=rs.getString("idusuario");
+ 
  session.setAttribute("sesionactiva", encontrado);
 
  session.setAttribute( "theName", name );
+ 
+ session.setAttribute( "id", id );
 
  session.setAttribute( "fullname", fullname );
 
