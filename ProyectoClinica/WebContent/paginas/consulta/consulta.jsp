@@ -118,8 +118,12 @@ while(rs6.next())
 </tr>
 </table>
 </div>
+
 <div id="boton">
-<input id="boton1" type="submit" value="guardar cita" />
+<a href="../consulta/consultadiagnostico/verdiagnosticos.jsp?id_consulta=<%=id_consulta%>">diagnostico</a>
+<a href="../consulta/consultasignovitales/mostrarsigvitales.jsp?id_consulta=<%=id_consulta%>">signos vitales</a>
+<a href="../consulta/consultasintomas/mostrarsintomas.jsp?id_consulta=<%=id_consulta%>">signtomas</a>
+<input id="boton1" type="submit" value="guardar cita" /> 
 </div>
 <br>
 </form>

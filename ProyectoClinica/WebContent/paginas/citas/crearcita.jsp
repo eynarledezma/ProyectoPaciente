@@ -62,6 +62,7 @@ ResultSet rs3=st3.executeQuery(query3);
 </form>
 
 <%
+String ID_paciente ="";
 if (rs.next())
 {
 	 
@@ -69,7 +70,7 @@ if (rs.next())
 	 rs=st.executeQuery(query);
 while(rs.next())
 {
-
+	ID_paciente =rs.getString(1);
 %>
 <tr><td colspan=1 ALIGN="left"> Id_paciente</td><td><INPUT TYPE="text" NAME="id_paciente" value ="<%=rs.getString(1)%>"></td></tr>
 <tr><td colspan=1 ALIGN="left"> Nombre</td><td><INPUT TYPE="text" NAME="nombrepaciente" value ="<%=rs.getString(2)%> <%=rs.getString(3)%>"></td></tr>
@@ -138,15 +139,21 @@ while(rs3.next())
 %>
 
 <tr><td colspan=1 ALIGN="left"> Observacion </td> <td><INPUT TYPE="text" NAME="observacion" ></td> </tr>
+<tr><td colspan=1 ALIGN="left"> temperatura</td><td> <INPUT TYPE="text" NAME="temperatura" ></td> </tr>
+<tr><td colspan=1 ALIGN="left"> precion arterial</td><td> <input type="text" name="precionart"> </td> </tr>
+<tr><td colspan=1 ALIGN="left"> oxigeno </td> <td> <input type="text" name="oxigeno">
+<tr><td colspan=1 ALIGN="left"> peso </td> <td> <input type="text" name="peso">
+<tr><td colspan=1 ALIGN="left"> talla </td> <td><INPUT TYPE="text" NAME="talla" ></td> </tr>
 </tr>
 </table>
 </div>
 <div id="boton">
+<a href="../citas/crearsigvi.jsp?id_usuario=<%=ID_paciente%>">crear signos vitales</a>
 <input id="boton1" type="submit" value="guardar cita" />
 </div>
 <br>
 </form>
-<div>
+
 <footer>
 Derechos reservados &copy; 2021 <br>
 Grupo 2ls222<br>
@@ -154,6 +161,6 @@ Grupo2ls222@utp.ac.pa<br>
 www.clinicautp.com <br>
 
 </footer>
-</div>
+
 </body>
 </html>

@@ -34,7 +34,7 @@ if (rs.next())
 <hr>
 <h2 align="center">Datos</h2>
 
-<div class="table-responsive">
+<div id="seccionA" class="table-responsive">
 
 <table style="position:absolute;top:150px;left:550px;" class="table table-striped" border="2" bordercolor="#2494b7">
 <thead>
