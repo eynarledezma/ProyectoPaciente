@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <% session.setAttribute("accion","abrir");
     session.setAttribute("mod1","1");
+    session.setAttribute("mod3","3");
     %>
   <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
