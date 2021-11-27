@@ -19,10 +19,24 @@ String modulo = (String)session.getAttribute( "mod1" );
 String idusuario=(String)session.getAttribute("id");
 //String modulo =  "fpriv" ;
 //accion = "a";
-if (accion == "lectura")
+
+if(accion=="abrirLab"){
+	query2="select idusuario"; 
+	query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and abrirLab = 'si' ";
+	
+}
+else
+{
+if(accion == "abrirDiagno"){
+	 query2="select idusuario"; 
+		query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and abrirDiagno = 'si' ";
+}
+else{
+
+if (accion == "abMedic")
 {
 	   query2="select idusuario"; 
-	query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and lectura = 'si' ";
+	query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and abMedic = 'si' ";
 }
 else
 {
@@ -35,19 +49,34 @@ else
 	else
 		
 	{
-		if (accion== "modifica")
+		if (accion== "aabrir")
 		{
 			 query2="select idusuario  "; 
-				query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and modifica = 'Si' ";
+				query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and aabrir= 'si' ";
 		
 		}
 	    else
 	    {
+	    	if (accion== "abrirEspe")
+			{
+				 query2="select idusuario  "; 
+					query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and abrirEspe = 'si' ";
+			
+			}
+	    	else{
+	    		if(accion=="acitas"){
 		 query2="select idusuario  "; 
-		  query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and eliminar = 'Si' ";
+		  query2 += "from tprivilegios where idusuario = '"+idusuario+"' and idmodulo = '" + modulo + "' and acitas = 'si' ";
+	    		}
+	    	}
+	    	
 	    }
 	}
+	}
 }
+}
+
+
 
 //out.println(query2);
 ResultSet rs2=st2.executeQuery(query2);

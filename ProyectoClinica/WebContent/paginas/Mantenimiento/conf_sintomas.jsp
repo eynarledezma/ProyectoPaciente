@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<% session.setAttribute("accion","abrir");
+    session.setAttribute("mod1","1");
+    %>
+      <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
 <head>
 <link href="../citas/cabpacientes.css" rel="stylesheet" type="text/css"/>

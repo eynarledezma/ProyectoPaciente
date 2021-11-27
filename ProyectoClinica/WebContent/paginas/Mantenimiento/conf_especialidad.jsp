@@ -4,9 +4,13 @@
 <%@page import="java.io.*" %> 
 <%@page import="javax.sql.*" %> 
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+<%-- <%@include file="../citas/Conecta.jsp" %> --%>
 
 <!DOCTYPE html>
+<% session.setAttribute("accion","abrir");
+    session.setAttribute("mod1","1");
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
 <head>
 

@@ -9,5 +9,8 @@
 <body>
 <h1>NO TIENE PERMISOS PARA ENTRAR A ESTA PAGINA</h1><br>
 <h1>CONSULTE CON EL ADMINISTRADOR POR SUS PERMISOS </h1>
+<%
+response.sendRedirect("../MenuPrincipal/error.jsp");	
+%>
 </body>
 </html>
