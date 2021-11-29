@@ -7,8 +7,13 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+
 <!DOCTYPE html>
+<% session.setAttribute("accion","insertar");
+    session.setAttribute("mod1","6");
+    
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -20,7 +25,7 @@
 
 Statement st=con.createStatement();
 String query="SELECT * "; 
-query += "FROM tcitas";
+query += "FROM tcitas  WHERE estado ='5'";
 
 out.println(query);
 

@@ -31,8 +31,8 @@ Statement st2=con.createStatement();
 
 
 
-String query2="select id,descripcion "; 
-query2 += "from diagnosticos";
+String query2="select idsintomas,descripcion "; 
+query2 += "from tsintomas";
 
 
 
@@ -47,7 +47,7 @@ ResultSet rs2=st2.executeQuery(query2);
 %>
 
 
-<h1 align="center">Crear diagnostico</h1>
+<h1 align="center">Crear sintoma</h1>
 <hr>
 <h2 align="center">Datos</h2>
 <div id="seccionA">
@@ -65,7 +65,7 @@ ResultSet rs2=st2.executeQuery(query2);
 
 <tr><td colspan=1 ALIGN="left"> observacion </td> <td> <input type="text" name="observacion">
 
-<tr><td colspan=1 ALIGN="left"> diagnotisco </td> <td> <select name="diagnostico">
+<tr><td colspan=1 ALIGN="left"> sintoma </td> <td> <select name="sintoma">
 
 <%
 if (rs2.next())

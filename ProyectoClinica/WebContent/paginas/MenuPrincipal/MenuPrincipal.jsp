@@ -40,16 +40,16 @@
 								<li><a href="">Submenu4</a></li>
 							</ul>
 						</li>
-						<li><a href="../Mantenimiento/conf_medicamentos.jsp" target="miContenedor">Config. Medicamentos</a></li>
-						<li><a href="../Mantenimiento/conf_sintomas.jsp" target="miContenedor">Config. Sintomas</a></li>
-						<li><a href="../Mantenimiento/conf_diagnostico.jsp" target="miContenedor">Config. Diagnostico</a></li>
-						<li><a href="../Mantenimiento/conf_laboratorio.jsp" target="miContenedor">Config. Laboratorio</a></li>
+						<li><a href="../consulta/consultareseta/modificar.jsp" target="miContenedor">Config. Medicamentos</a></li>
+						<li><a href="../consulta/consultasintomas/modificar.jsp" target="miContenedor">Config. Sintomas</a></li>
+						<li><a href="../consulta/consultadiagnostico/modificar.jsp" target="miContenedor">Config. Diagnostico</a></li>
+						<li><a href="../consulta/consultalaboratorio/modificar.jsp" target="miContenedor">Config. Laboratorio</a></li>
 					</ul>
 				</li>
 				<li><a><font color="white">Citas</font></a> 
 					<ul>
 						<li><a href="../citas/crearcita.jsp" target="miContenedor">Crear Citas</a></li>
-						<li><a href="">Submenu2</a></li>
+						<li><a href="../citas/modificar.jsp" target="miContenedor">ver citas</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a>
 							<ul>
@@ -65,8 +65,8 @@
 					<ul>
 						<li><a href="../consulta/crearconsulta.jsp" target="miContenedor">crear consulta</a></li>
 						<li><a href="../consulta/mostrar.jsp" target="miContenedor">ver consulta</a></li>
-						<li><a href="">Submenu3</a></li>
-						<li><a href="">Submenu4</a></li>
+						<li><a href="../consulta/consultalaboratorio/crearlaboratorio.jsp " target="miContenedor">crear laboratorio</a></li>
+						<li><a href="../consulta/consultareseta/crearreseta.jsp" target="miContenedor">crear receta</a></li>
 					</ul>
 				</li>
 				<li><a><font color="white">Reporte</font></a></li>

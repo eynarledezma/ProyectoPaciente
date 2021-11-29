@@ -7,9 +7,14 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
-<%@include file="../consultadiagnostico/Conecta.jsp" %>
+
 
 <!DOCTYPE html>
+<% session.setAttribute("accion","insertar");
+    session.setAttribute("mod1","9");
+    
+    %>
+<%@include file="../validasession.jsp" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -20,7 +25,7 @@
 
 <%
 String id_consulta="";
-id_consulta=(request.getParameter("id_consulta") != null) ? request.getParameter("id_consulta") : "";
+id_consulta=(request.getParameter("id_consulta") != null) ? request.getParameter("id_consulta") : "0";
 String id_paciente="";
 id_paciente=(request.getParameter("id_paciente") != null) ? request.getParameter("id_paciente") : "";
  
@@ -31,8 +36,8 @@ Statement st2=con.createStatement();
 
 
 
-String query2="select id,descripcion "; 
-query2 += "from diagnosticos";
+String query2="select idreceta,descripcion "; 
+query2 += "from treceta";
 
 
 
@@ -47,7 +52,7 @@ ResultSet rs2=st2.executeQuery(query2);
 %>
 
 
-<h1 align="center">Crear diagnostico</h1>
+<h1 align="center">Crear receta</h1>
 <hr>
 <h2 align="center">Datos</h2>
 <div id="seccionA">
@@ -65,7 +70,7 @@ ResultSet rs2=st2.executeQuery(query2);
 
 <tr><td colspan=1 ALIGN="left"> observacion </td> <td> <input type="text" name="observacion">
 
-<tr><td colspan=1 ALIGN="left"> diagnotisco </td> <td> <select name="diagnostico">
+<tr><td colspan=1 ALIGN="left"> receta </td> <td> <select name="receta">
 
 <%
 if (rs2.next())
@@ -90,7 +95,7 @@ while(rs2.next())
 </table>
 </div>
 <div id="boton">
-<input id="boton1" type="submit" value="guardar giagnostico" />
+<input id="boton1" type="submit" value="guardar receta" />
 </div>
 <br>
 </form>

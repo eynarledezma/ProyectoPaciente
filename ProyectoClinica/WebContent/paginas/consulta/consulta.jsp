@@ -120,9 +120,11 @@ while(rs6.next())
 </div>
 
 <div id="boton">
-<a href="../consulta/consultadiagnostico/verdiagnosticos.jsp?id_consulta=<%=id_consulta%>">diagnostico</a>
-<a href="../consulta/consultasignovitales/mostrarsigvitales.jsp?id_consulta=<%=id_consulta%>">signos vitales</a>
-<a href="../consulta/consultasintomas/mostrarsintomas.jsp?id_consulta=<%=id_consulta%>">signtomas</a>
+<a href="../consulta/consultareseta/crearreseta.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">crear receta</a>
+<a href="../consulta/consultalaboratorio/crearlaboratorio.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">crear receta</a>
+<a href="../consulta/consultadiagnostico/verdiagnosticos.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">diagnostico</a>
+<a href="../consulta/consultasignovitales/mostrarsigvitales.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">signos vitales</a>
+<a href="../consulta/consultasintomas/crearsintoma.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">signtomas</a>
 <input id="boton1" type="submit" value="guardar cita" /> 
 </div>
 <br>

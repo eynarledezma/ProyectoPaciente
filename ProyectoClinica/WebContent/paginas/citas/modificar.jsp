@@ -7,10 +7,14 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
 <!DOCTYPE html>
+<% session.setAttribute("accion","lectura");
+    session.setAttribute("mod1","3");
+    
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
-<head>
+<head> 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link href="../citas/cabpacientes.css" rel="Stylesheet" type= "text/css">
@@ -20,7 +24,7 @@
 
 Statement st=con.createStatement();
 String query="SELECT * "; 
-query += "FROM tcitas";
+query += "FROM tcitas WHERE estado ='5'";
 
 out.println(query);
 

@@ -6,8 +6,9 @@
 <%@page import="java.io.*" %>
  
 <%@page import="javax.sql.*" %>
+ 
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+<%@include file="../consultadiagnostico/Conecta.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,33 +18,28 @@
 <body>
 <%
 
-String id_cita=request.getParameter("id_cita");
+String id_consulta=request.getParameter("id_consulta");
+
 String id_paciente=request.getParameter("id_paciente");
+
 String fecha=request.getParameter("fecha");
  
-String id_especialidad=request.getParameter("id_especialidad");
- 
-
- 
-String id_medico=request.getParameter("id_medico");
- 
 String observacion=request.getParameter("observacion");
- String eliminar="6";
+
+String idreceta=request.getParameter("receta");
+
 
  
+
 
 Statement st=con.createStatement();
-String sql="insert into tconsulta (idcita,idpaciente,fecha,idespecialidad,idmedico,observacion) values('"+id_cita+"','"+id_paciente+"','"+fecha+"','"+id_especialidad+"','"+id_medico+"','"+observacion+"')";
+String sql="insert into `tconsultareceta` (`idconsulta`, `idreceta`, `otrosdatos`, `fecha`, `idusuario`) values('"+id_consulta+"','"+idreceta+"','"+observacion+"','"+fecha+"','"+id_paciente+"')";
 int flag=st.executeUpdate(sql);
-Statement st2=con.createStatement();
 
 
-String sql2="update tcitas set  estado='"+eliminar+"' where idcita='"+id_cita+"'" ;
-out.println(sql2); 
-int flag2=st2.executeUpdate(sql2);
 %>
 <% 
-String site = new String("../consulta/crearconsulta.jsp");
+String site = new String("../consultareseta/crearreseta.jsp");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site);
          %>

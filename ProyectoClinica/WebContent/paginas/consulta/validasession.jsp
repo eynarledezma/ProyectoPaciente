@@ -97,7 +97,7 @@ if (encontrado==1)
 else
 {
 	
-	response.sendRedirect("../MenuPrincipal/error.jsp");	
+	response.sendRedirect("../error.jsp");	
 	
 }
 

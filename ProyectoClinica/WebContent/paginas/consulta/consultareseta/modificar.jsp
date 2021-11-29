@@ -9,23 +9,23 @@
 <%@page import="java.sql.Connection" %>
 
 <!DOCTYPE html>
-<% session.setAttribute("accion","insertar");
-    session.setAttribute("mod1","7");
+<% session.setAttribute("accion","modificar");
+    session.setAttribute("mod1","1");
     
     %>
-  <%@include file="../MenuPrincipal/validasession.jsp" %>
+<%@include file="../validasession.jsp" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>crear cita</title>
-<link href="../citas/cabpacientes.css" rel="Stylesheet" type= "text/css">
+<title>Insert title here</title>
+<link href="../consultadiagnostico/cabpacientes.css" rel="Stylesheet" type= "text/css">
 </head>
 <body>
 <%
 
 Statement st=con.createStatement();
 String query="SELECT * "; 
-query += "FROM tconsulta";
+query += "FROM tconsultareceta WHERE estado ='5'";
 
 out.println(query);
 
@@ -35,22 +35,24 @@ if (rs.next())
 {
 	 rs=st.executeQuery(query);
 %>
-<h1 align="center">consulta</h1>
+<h1 align="center">modificar laboratorio</h1>
 <hr>
 <h2 align="center">Datos</h2>
 
-<div id="seccionC" class="table-responsive">
+<div id="seccionA" class="table-responsive">
+
 <table style="position:absolute;top:150px;left:550px;" class="table table-striped" border="2" bordercolor="#2494b7">
 <thead>
 <tr>
-<th>id_consulta</th>
-<th>id_cita</th>
-<th>id_paciente</th>
+<th>id</th>
+<th>id consulta</th>
+<th>id receta</th>
+<th>datos</th>
 <th>fecha</th>
-<th>idmedico</th>
-<th>id_especialidad</th>
-<th>observacion</th>
-<th>ver consulta</th>
+<th>idusuario</th>
+<th>estado</th>
+<th>modificar</th>
+<th>eliminar</th>
 
 
 </tr>
@@ -73,8 +75,8 @@ while(rs.next())
 <td><%=rs.getString(5)%></td>
 <td><%=rs.getString(6)%></td>
 <td><%=rs.getString(7)%></td>
-<td><a href="consulta.jsp?id_consulta=<%=rs.getString(1)%>&id_paciente=<%=rs.getString(3)%>&id_especialidad=<%=rs.getString(6)%>&fecha=<%=rs.getString(4)%>&id_medico=<%=rs.getString(5)%>&observacion=<%=rs.getString(7)%>">--</a></td>
-
+<td><a href="modiinfo.jsp?id_consulta=<%=rs.getString(1)%>&id_diagnostico=<%=rs.getString(3)%>&observacion=<%=rs.getString(4)%>&id_paciente=<%=rs.getString(5)%>">--</a></td>
+<td><a href=delete.jsp?id_consulta=<%=rs.getString(1)%>>--</a></td>
 
 
 

@@ -7,9 +7,15 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+
 
 <!DOCTYPE html>
+<% session.setAttribute("accion","abrir");
+    session.setAttribute("mod1","2");
+    
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
+  
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -149,7 +155,6 @@ while(rs3.next())
 </table>
 </div>
 <div id="boton">
-<a href="../citas/crearsigvi.jsp?id_usuario=<%=ID_paciente%>">crear signos vitales</a>
 <input id="boton1" type="submit" value="guardar cita" />
 </div>
 <br>

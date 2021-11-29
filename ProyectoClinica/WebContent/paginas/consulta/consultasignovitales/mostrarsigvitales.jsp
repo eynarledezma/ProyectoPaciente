@@ -93,22 +93,35 @@ while(rs.next())
 </tr>
 
 
-
 <%
 
 }
 
 %>
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<div id="boton">
+<a href="../consultasignovitales/crearsigvi.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">crear signo vitales</a>
+</div>
 <%
 
 }
 else
 {
 	out.println("No existen registros con este Criterio de Búsqueda ");
+%>
+<div id="boton">
+<a href="../consultasignovitales/crearsigvi.jsp?id_consulta=<%=id_consulta%>&id_paciente=<%=id_paciente%>">crear signo vitales</a>
+</div>
+<% 
 }
-	
-
 %>
 </div>
 </div>

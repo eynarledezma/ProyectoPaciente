@@ -5,9 +5,14 @@
 <%@page import="javax.sql.*" %>
 
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+
 
 <!DOCTYPE html>
+<% session.setAttribute("accion","modifica");
+    session.setAttribute("mod1","4");
+    
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">

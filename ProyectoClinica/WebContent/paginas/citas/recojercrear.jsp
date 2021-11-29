@@ -8,8 +8,13 @@
 <%@page import="javax.sql.*" %>
  
 <%@page import="java.sql.Connection" %>
-<%@include file="../citas/Conecta.jsp" %>
+
 <!DOCTYPE html>
+<% session.setAttribute("accion","abrir");
+    session.setAttribute("mod1","2");
+    
+    %>
+  <%@include file="../MenuPrincipal/validasession.jsp" %>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -19,6 +24,7 @@
 <%
 
 String id_paciente=request.getParameter("id_paciente");
+
 String fechacita=request.getParameter("fechacita");
  
 String fechaconsulta=request.getParameter("fechaconsulta");
