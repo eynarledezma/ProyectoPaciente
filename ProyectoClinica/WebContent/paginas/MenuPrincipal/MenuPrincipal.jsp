@@ -29,8 +29,8 @@
 			<ul class="nav">
 				<li><a  ><font color="white">Mantenimiento</font></a>
 					<ul>
-						<li><a href="">Registro Paciente</a></li>
-						<li><a href="">Config. Estado</a></li>
+						<li><a href="../Mantenimiento/registro_paciente.jsp" target="miContenedor">Registro Paciente</a></li>
+						<li><a href="../Mantenimiento/conf_estado.jsp" target="miContenedor">Config. Estado</a></li>
 						<li><a href="../Mantenimiento/conf_usuario.jsp" target="miContenedor">Config. Usuario</a></li>
 						<li><a href="../Mantenimiento/conf_especialidad.jsp" target="miContenedor">Config. Especialidad</a>
 							<ul>
