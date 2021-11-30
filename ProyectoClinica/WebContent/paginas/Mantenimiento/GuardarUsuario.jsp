@@ -5,13 +5,13 @@
 <%@page import="javax.sql.*" %> 
 <%@page import="java.util.Date" %>
 <%@page import="java.sql.Connection" %>
-<%-- <%@include file="../citas/Conecta.jsp" %> --%>
+<%@include file="../citas/Conecta.jsp" %>  
 <!DOCTYPE html>
-<% session.setAttribute("accion","modifica");
-    session.setAttribute("mod1","1");
-    session.setAttribute("mod3","3");
-    %>
-  <%@include file="../MenuPrincipal/validasession.jsp" %>
+<%-- <% session.setAttribute("accion","modifica");  --%>
+//  session.setAttribute("mod1","1");
+//    session.setAttribute("mod3","3");
+<%--    %>  --%>
+<%-- <%@include file="../MenuPrincipal/validasession.jsp" %>  --%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -28,15 +28,16 @@ String email=request.getParameter("email");
 String password=request.getParameter("password");
 String celular=request.getParameter("celular"); 
 String estado=request.getParameter("estado"); 
-String username=request.getParameter("username"); 
+String usernamee=request.getParameter("username"); 
 String sexo=request.getParameter("sexo"); 
 String fnac=request.getParameter("fechanacimiento"); 
 String  edad=request.getParameter("edad");
+session.setAttribute( "cedula", cedula );
 /* SimpleDateFormat formato = new SimpleDateFormat("dd/LL/yyyy"); */
 /* date fecha= formato.format(fechanacimiento); */
  	/* Date fecha = new SimpleDateFormat ("dd/MM/yyyy").parse(fechanacimiento);  */
 	Statement st=con.createStatement();
-	String sql="insert into tusuario(cedula,nombre,apellido,direccion,telefono,email,password,celular,estado,username,sexo,fecha_nac,edad) values ('"+cedula+"','"+nombre+"','"+apellido+"','"+direccion+"','"+telefono+"','"+email+"','"+password+"','"+celular+"','"+estado+"','"+username+"','"+sexo+"','"+fnac+"','"+edad+"')";
+	String sql="insert into tusuario(cedula,nombre,apellido,direccion,telefono,email,password,celular,estado,username,sexo,fecha_nac,edad) values ('"+cedula+"','"+nombre+"','"+apellido+"','"+direccion+"','"+telefono+"','"+email+"','"+password+"','"+celular+"','"+estado+"','"+usernamee+"','"+sexo+"','"+fnac+"','"+edad+"')";
 	int flag=st.executeUpdate(sql);
 
 	
@@ -46,7 +47,7 @@ String  edad=request.getParameter("edad");
 %> 
 
  <% 
-String site = new String("../Mantenimiento/conf_usuario.jsp");
+String site = new String("../Mantenimiento/privilegios.jsp");
    response.setStatus(response.SC_MOVED_TEMPORARILY);
          response.setHeader("Location", site);
          %> 
