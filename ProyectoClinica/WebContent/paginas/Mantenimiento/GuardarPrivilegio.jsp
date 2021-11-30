@@ -18,7 +18,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<% 
+
+Statement stt=con.createStatement();
+
+String sqlid="select MAX(idusuario)AS idusuario FROM tusuario";
+//int flag=stt.executeUpdate(sqlid);
+ResultSet rs=stt.executeQuery(sqlid);
+rs.next();
+String idusuario="";%>
+<% 
+session.setAttribute( "idusuario", rs.getString(1));
+
+%>
+
 <%
+
 //String idusuarioo=request.getParameter("idusuario"); 
 String moduloo=request.getParameter("modulo"); 
 String imprimirr=request.getParameter("privilegio1"); 
@@ -27,12 +42,12 @@ String modificarr=request.getParameter("privilegio3");
 String insertarr=request.getParameter("privilegio4"); 
 String abrirr=request.getParameter("privilegio5"); 
 String eliminarr=request.getParameter("privilegio6"); 
-//String idusuarioo=(String)session.getAttribute("id");
+String idusuarioo=(String)session.getAttribute("idusuario");
 Statement st=con.createStatement();
-	String sql="insert into tprivilegios(idmodulo,lectura,insertar,modificar,eliminar,imprimir,abrir) values ('"+moduloo+"','"+lecturaa+"','"+insertarr+"','"+modificarr+"','"+eliminarr+"','"+imprimirr+"','"+abrirr+"')";
+	String sql="insert into tprivilegios(idusuario,idmodulo,lectura,insertar,modificar,eliminar,imprimir,abrir) values ('"+idusuario+"','"+moduloo+"','"+lecturaa+"','"+insertarr+"','"+modificarr+"','"+eliminarr+"','"+imprimirr+"','"+abrirr+"')";
 	int flag=st.executeUpdate(sql);
 
-
+	
 	
 	out.print("ESPECIALIDAD REGISTRADA"); 
 	
