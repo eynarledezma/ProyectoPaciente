@@ -18,6 +18,7 @@
 <title>Sistema Pacientes</title>
 </head>
 <body>
+ 
 <%
 String idusuario=(String)session.getAttribute("id");
 %>

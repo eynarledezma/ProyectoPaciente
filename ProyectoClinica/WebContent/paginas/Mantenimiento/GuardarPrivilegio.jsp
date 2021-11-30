@@ -31,7 +31,7 @@ String idusuario="";%>
 session.setAttribute( "idusuario", rs.getString(1));
 
 %>
-
+ 
 <%
 
 //String idusuarioo=request.getParameter("idusuario"); 
