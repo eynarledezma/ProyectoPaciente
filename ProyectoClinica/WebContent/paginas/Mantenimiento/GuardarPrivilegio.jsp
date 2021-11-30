@@ -44,7 +44,7 @@ String abrirr=request.getParameter("privilegio5");
 String eliminarr=request.getParameter("privilegio6"); 
 String idusuarioo=(String)session.getAttribute("idusuario");
 Statement st=con.createStatement();
-	String sql="insert into tprivilegios(idusuario,idmodulo,lectura,insertar,modificar,eliminar,imprimir,abrir) values ('"+idusuario+"','"+moduloo+"','"+lecturaa+"','"+insertarr+"','"+modificarr+"','"+eliminarr+"','"+imprimirr+"','"+abrirr+"')";
+	String sql="insert into tprivilegios(idusuario,idmodulo,lectura,insertar,modificar,eliminar,imprimir,abrir) values ('"+idusuarioo+"','"+moduloo+"','"+lecturaa+"','"+insertarr+"','"+modificarr+"','"+eliminarr+"','"+imprimirr+"','"+abrirr+"')";
 	int flag=st.executeUpdate(sql);
 
 	
